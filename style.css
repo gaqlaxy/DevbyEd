@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fdf2e9;
+    font-family: 'Raleway', sans-serif;
+}
+
+#logo{
+    color: #333;
+}
+.nav-header{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    min-height: 10vh;
+    justify-content: space-between;
+    color: #333;
+}
+.line1, .line2{
+    width: 3rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: #333;
+    pointer-events: none;
+}
