@@ -19,6 +19,9 @@ body {
     min-height: 10vh;
     justify-content: space-between;
     color: #333;
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0rem;
 }
 .line1, .line2{
     width: 3rem;
@@ -26,4 +29,122 @@ body {
     margin: 0.4rem;
     background: #333;
     pointer-events: none;
+}
+.slide {
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    background: #fdf2e9;
+
+}
+.hero-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-basis: 25rem;
+    padding-left: 5rem;
+    position: relative;
+}
+.hero-img{
+    position: relative;
+    flex: 1;
+    flex-basis: 25rem;
+}
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cotton-span{
+    color: #cc3064;
+}
+.banana-span{
+    color: rgb(86, 124, 228);
+}
+.silk-span{
+    color: #153608;
+}
+.hero-description h2{
+    font-size: 3rem;
+}
+.hero-description p{
+    padding: 3rem 0rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+.explore{
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    align-self: flex-start;
+    cursor: pointer;
+}
+.prod1{
+    border: 1px solid #cc3064;
+}
+.prod2{
+    border: 1px solid rgb(86, 124, 228);
+}
+.prod3{
+    border: 1px solid #153608;
+}
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
+}
+.burger{
+    cursor: pointer;
+}
+.nav-links {
+    font-size: 3rem;
+    flex-basis: 30rem;
+}
+.contact{
+    flex-basis: 30rem;
+}
+.nav-links h3{
+    padding: 3rem 0rem;
+}
+.contact h2{
+    font-size: 3rem;
+    padding: 2rem 0rem;
+}
+.contact p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.reveal-img, .reveal-text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fdf2e9;
+    left: 0;
+    top: 0;
+}
+.cursor {
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
 }
