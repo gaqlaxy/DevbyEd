@@ -90,15 +90,15 @@ body {
     align-self: flex-start;
     cursor: pointer;
 }
-.prod1{
-    border: 1px solid #cc3064;
+.prod{
+    border: 1px solid #333;
 }
-.prod2{
+/* .prod2{
     border: 1px solid rgb(86, 124, 228);
 }
 .prod3{
     border: 1px solid #153608;
-}
+} */
 .nav-bar{
     position: fixed;
     top: 0;
@@ -138,15 +138,60 @@ body {
 .reveal-img, .reveal-text{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 150%;
     background: #fdf2e9;
     left: 0;
-    top: 0;
+    top: -15px;
 }
 .cursor {
     width: 3rem;
     height: 3rem;
-    border: 2px solid white;
+    border: 2px solid #bd6218;
     border-radius: 50%;
     position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    transition-property: background, transform;
+    transform-origin: 75% 75%;
+}
+.scrollmagic-pin-spacer{
+    position: static !important;
+}
+.cursor.nav-active{
+    background: #bd6218;
+    transform: scale(2);
+}
+.cursor.explore-active{
+    background: white;
+    transform: scale(2);
+}
+.cursor-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 0.65rem;
+    transform: translate(-50%, -50%);
+}
+.title{
+    position: relative;
+    overflow: hidden;
+}
+.title-swipe{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    mix-blend-mode: darken;
+    transform: translateY(100%);
+}
+.t-swipe1{
+    color: #cc3064;
+}
+.t-swipe2{
+    color: rgb(86, 124, 228);
+}
+.t-swipe3{
+    color: #153608;
 }
