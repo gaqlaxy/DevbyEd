@@ -92,7 +92,21 @@ function activeCursor(e) {
 }
 burger.addEventListener("click", navToggle);
 function navToggle(e){
-  gsap.to(".line1", 0.5, {rotate: "45",y:5});
-  gsap.to(".line2", 0.5, {rotate: "-45",y:-5});
+  if(!e.target.classList.contains("active")){
+    e.target.classList.add("active");
+    gsap.to(".line1", 0.5, {rotate: "45",y:5,background: "black"});
+    gsap.to(".line2", 0.5, {rotate: "-45",y:-5,background:"black"});
+    gsap.to("#logo",1, {color:"black"});
+    gsap.to(".nav-bar", 1, {clipPath: "circle(2500px at 100% -10%)"});
+    document.body.classList.add("hide");
+  }
+  else {
+    e.target.classList.remove("active");
+    gsap.to(".line1", 0.5, {rotate: "0",y:0,background: "#333"});
+    gsap.to(".line2", 0.5, {rotate: "0",y:0,background:"#333"});
+    gsap.to("#logo",1, {color:"#333"});
+    gsap.to(".nav-bar", 1, {clipPath: "circle(50px at 100% -10%)"});
+    document.body.classList.remove("hide");
+  }
 }
 animateSlides();
