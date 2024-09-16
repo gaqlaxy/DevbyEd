@@ -118,6 +118,8 @@ body {
 .nav-links {
   font-size: 3rem;
   flex-basis: 30rem;
+  font-family: "Pixelify Sans", sans-serif;
+
 }
 .contact {
   flex-basis: 30rem;
