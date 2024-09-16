@@ -12,6 +12,7 @@ body {
 
 #logo {
   color: #333;
+  font-family: "Pixelify Sans", sans-serif;
 }
 .nav-header {
   display: flex;
