@@ -182,8 +182,8 @@ body {
   top: 0;
   left: 0;
   position: absolute;
-  mix-blend-mode: darken;
-  transform: translateY(100%);
+ mix-blend-mode: darken;
+    transform: translateY(100%);
 }
 .t-swipe1 {
   background: #cc3064;
@@ -194,13 +194,7 @@ body {
 .t-swipe3 {
   background: rgb(255, 139, 93);
 }
-/*
-.t-swipe2{
-    color: rgb(86, 124, 228);
-}
-.t-swipe3{
-    color: #153608;
-} */
+
 .scrollmagic-pin-spacer {
   position: static !important;
 }

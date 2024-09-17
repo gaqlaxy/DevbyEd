@@ -109,4 +109,23 @@ function navToggle(e){
     document.body.classList.remove("hide");
   }
 }
-animateSlides();
+
+
+barba.init({
+  views: [
+    {
+      namespace:"home",
+      beforeEnter(){
+        animateSlides();
+      },
+      beforeLeave(){
+        slideScene.destroy();
+        pageScene.destroy();
+        controller.destroy();
+      }
+    },
+    {
+      namespace:"products"
+    }
+  ]
+});
