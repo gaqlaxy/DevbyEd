@@ -121,11 +121,13 @@ main{
 .nav-links {
   font-size: 3rem;
   flex-basis: 30rem;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "DM Serif Display", serif;
 
 }
 .contact {
   flex-basis: 30rem;
+  font-family: "DM Serif Display", serif;
+  
 }
 .nav-links h3 {
   padding: 3rem 0rem;
@@ -137,6 +139,7 @@ main{
 .contact p {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 400;
 }
 .reveal-img,
 .reveal-text {
