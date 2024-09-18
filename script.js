@@ -91,21 +91,21 @@ function activeCursor(e) {
   }
 }
 burger.addEventListener("click", navToggle);
-function navToggle(e){
-  if(!e.target.classList.contains("active")){
+function navToggle(e) {
+  if (!e.target.classList.contains("active")) {
     e.target.classList.add("active");
-    gsap.to(".line1", 0.5, {rotate: "45",y:5,background: "black"});
-    gsap.to(".line2", 0.5, {rotate: "-45",y:-5,background:"black"});
-    gsap.to("#logo",1, {color:"black"});
-    gsap.to(".nav-bar", 1, {clipPath: "circle(2500px at 100% -10%)"});
+    gsap.to(".line1", 0.5, { rotate: "45", y: 5, background: "black" });
+    gsap.to(".line2", 0.5, { rotate: "-45", y: -5, background: "black" });
+    gsap.to("#logo", 1, { color: "black" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%)" });
     document.body.classList.add("hide");
   }
   else {
     e.target.classList.remove("active");
-    gsap.to(".line1", 0.5, {rotate: "0",y:0,background: "#333"});
-    gsap.to(".line2", 0.5, {rotate: "0",y:0,background:"#333"});
-    gsap.to("#logo",1, {color:"#333"});
-    gsap.to(".nav-bar", 1, {clipPath: "circle(50px at 100% -10%)"});
+    gsap.to(".line1", 0.5, { rotate: "0", y: 0, background: "#333" });
+    gsap.to(".line2", 0.5, { rotate: "0", y: 0, background: "#333" });
+    gsap.to("#logo", 1, { color: "#333" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10%)" });
     document.body.classList.remove("hide");
   }
 }
@@ -116,36 +116,39 @@ const logo = document.querySelector("#logo");
 barba.init({
   views: [
     {
-      namespace:"home",
-      beforeEnter(){
+      namespace: "home",
+      beforeEnter() {
         animateSlides();
         logo.href = "./index.html";
       },
-      beforeLeave(){
+      beforeLeave() {
         slideScene.destroy();
         pageScene.destroy();
         controller.destroy();
       }
     },
     {
-      namespace:"products",
-      beforeEnter(){
+      namespace: "products",
+      beforeEnter() {
         logo.href = "../index.html";
+        gsap.fromTo(".nav-header",1,{y:"100%"},{y:"0%", ease: "power2.inOut"});
       }
     }
   ],
   transitions: [
     {
-      leave({current,next}){
+      leave({ current, next }) {
         let done = this.async();
-        window.scrollTo(0,0);
-        const tl = gsap.timeline({defaults: {ease: "power2.out"}});
-        tl.fromTo(current.container,1,{opacity:1},{opacity:0 , onComplete : done});
+        window.scrollTo(0, 0);
+        const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        tl.fromTo(current.container, 1, { opacity: 1 },{ opacity:0});
+        tl.fromTo(".swipe", 0.75, { x: "-100%" }, { x: "0%", onComplete: done }, "-=0.5");
       },
-      enter({current,next}){
+      enter({ current, next }) {
         let done = this.async();
-        const tl = gsap.timeline({defaults: {ease: "power2.out"}});
-        tl.fromTo(next.container,1,{opacity:0},{opacity:1, onComplete : done});
+        const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        tl.fromTo(".swipe", 0.5, { x: "0%" }, { x: "100%", stagger:0.25, onComplete: done });
+        tl.fromTo(next.container, 1, { opacity: 0 }, { opacity: 1 });
       }
     }
   ]
