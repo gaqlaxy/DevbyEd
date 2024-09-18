@@ -192,13 +192,13 @@ main{
     transform: translateY(100%);
 }
 .t-swipe1 {
-  background: #cc3064;
+  color: #cc3064;
 }
 .t-swipe2 {
-  background: rgb(167, 110, 231);
+  color: rgb(167, 110, 231);
 }
 .t-swipe3 {
-  background: rgb(255, 139, 93);
+  color: rgb(255, 139, 93);
 }
 
 .scrollmagic-pin-spacer {
