@@ -8,8 +8,11 @@ body {
   background: #fdf2e9;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
-
+main{
+  position: absolute;
+}
 #logo {
   color: #333;
   font-family: "Pixelify Sans", sans-serif;
@@ -249,3 +252,4 @@ body.hide{
   padding: 2rem 2rem 0rem 0rem;
   margin-bottom: 10rem;
 }
+
