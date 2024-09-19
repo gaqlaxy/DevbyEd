@@ -33,11 +33,11 @@ function animateSlides() {
       reverse: false, //using reverse false so that when we scroll backup below slide classes wont be disappearing
     })
       .setTween(slideTl)
-      .addIndicators({
-        colorStart: "red",
-        colorTrigger: "red",
-        name: "slide",
-      })
+      // .addIndicators({
+      //   colorStart: "red",
+      //   colorTrigger: "red",
+      //   name: "slide",
+      // })
       .addTo(controller);
     // Second Animation
     const pageTL = gsap.timeline();
@@ -51,12 +51,12 @@ function animateSlides() {
       duration: "100%",
       triggerHook: 0,
     })
-      .addIndicators({
-        colorStart: "red",
-        colorTrigger: "red",
-        name: "page",
-        indent: 200,
-      })
+      // .addIndicators({
+      //   colorStart: "red",
+      //   colorTrigger: "red",
+      //   name: "page",
+      //   indent: 200,
+      // })
       .setPin(slide, { pushFollowers: false })
       .setTween(pageTL)
       .addTo(controller);
@@ -189,12 +189,12 @@ function detailAnimation() {
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)
-      .addIndicators({
-        colorStart: "red",
-        colorTrigger: "red",
-        name: "detailScene",
-        indent: 200,
-      })
+      // .addIndicators({
+      //   colorStart: "red",
+      //   colorTrigger: "red",
+      //   name: "detailScene",
+      //   indent: 200,
+      // })
       .addTo(controller);
   });
 }
